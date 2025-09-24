@@ -1,309 +1,402 @@
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #F5F5F5;
-    color: #F8F9FA;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #f8f9fa;
 }
 
 /* Header */
 header {
-    background: #002B5B;
-    color: #F8F9FA;
-    padding: 20px;
-    text-align: center;
+  background: #002b5b;
+  color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
 }
 
 /* Navigation */
 nav {
-    background: #F5F5F5;
-    text-align: center;
-    padding: 10px;
+  background: #f5f5f5;
+  text-align: center;
+  padding: 10px;
 }
 
 nav a {
-    color: #002B5B;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
-    transition: background 0.3s ease, color 0.3s ease;
+  color: #002b5b;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    background: #FFD166;
-    color: #333;
-    border-radius: 5px;
+  background: #ffd166;
+  color: #333;
+  border-radius: 5px;
 }
 
 /* Main Content */
 main {
-    padding: 20px;
-    max-width: 900px;
-    margin: auto;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
 /* Article Styling (About Section, Experiences) */
 article {
-    background: #5A8E68;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 8px;
-    text-align: center;
-    max-width: 900px;
-    width: 100%;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  background: #5a8e68;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* About page: improve readability and left-align text */
+.about-page article {
+  text-align: left;
+}
+
+.about-page article > div {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-page h2 {
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+.about-page h3 {
+  margin: 20px 0 8px 0;
+  color: #ffd700;
+  text-align: left;
+}
+
+.about-page p {
+  margin: 0 0 12px 0;
+  line-height: 1.75;
+}
+
+/* Home page remains centered; specific left alignment is applied only on about.html */
 
 /* Experiences Grid */
 .experiences-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 20px;
-    padding: 20px;
-    max-width: 1100px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Forces 2 columns */
+  gap: 20px;
+  padding: 20px;
+  max-width: 900px; /* Adjusted to fit content */
+  margin: auto;
 }
 
 /* Experience Item */
 .experience-item {
-    background: #2E5939;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  background: #2e5939;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Experience Description */
 .experience-item p {
-    margin-top: 10px;
-    font-size: 14px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Title and date styling */
+.experience-item h3 {
+  margin: 0 0 4px 0;
+  text-align: center;
+}
+
+.experience-date {
+  margin: 0 0 8px 0;
+  color: #ffd700;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Lists inside experience items */
+.experience-item ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  text-align: left; /* Keep bullets and text left-aligned */
+}
+
+.experience-item li {
+  margin: 6px 0;
 }
 
 /* Container (Flexbox for About Section) */
+/* Adjust About Me section for better spacing */
 .container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 /* Text Section (Left Side) */
 .container div {
-    flex: 2;
+  flex: 2;
 }
 
-/* Image Section (Right Side) */
+/* About Section - Adjusted for Square Image */
 .image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center aligns vertically */
 }
 
 .image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  width: 350px; /* Adjust size for proportional fit */
+  height: 350px; /* Maintain square format */
+  border-radius: 12px; /* Softer edges */
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  border: none; /* Remove border, keep only shadow */
 }
 
 /* PDF Grid (Resources & Recent Documents) */
 .pdf-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 20px;
-    padding: 20px;
-    max-width: 900px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
 /* PDF Item */
 .pdf-item {
-    background: #2E5939;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  background: #2e5939;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Clickable PDF Image */
 .pdf-item a {
-    display: inline-block;
+  display: inline-block;
 }
 
 .pdf-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .pdf-item img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* View More Button */
 .view-more-container {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .view-more-btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #FFD700;
-    color: #222222;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s ease;
+  display: inline-block;
+  padding: 10px 15px;
+  background: #ffd700;
+  color: #222222;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 .view-more-btn:hover {
-    background: #FFD700;
+  background: #ffd700;
+}
+
+/* Read More Button (for About section) */
+.read-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.read-more-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ffd700;
+  color: #222222;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.read-more-btn:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Resources Sections (Resume, Cover Letter, Letters, Certifications) */
 .resources-section {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 /* Awards Section */
 /* Awards Video Section */
 .video-container {
-    background: #2E5939; /* Matching award item background */
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    max-width: 900px;
-    margin: auto;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  background: #2e5939; /* Matching award item background */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 920px;
+  margin: auto;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .video-container h3,
 .video-container p {
-    color: #F8F9FA; /* Light text for contrast */
+  color: #f8f9fa; /* Light text for contrast */
 }
 
 .video-container iframe {
-    width: 100%;
-    height: 400px;
-    max-width: 900px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 400px;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Awards Grid */
 .awards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 20px;
-    padding: 20px;
-    max-width: 1100px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 /* Award Item */
 .award-item {
-    background: #2E5939;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  background: #2e5939;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Award Description */
 .award-item p {
-    margin-top: 10px;
-    font-size: 14px;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 /* Sidebar / Aside */
 aside {
-    background: #ddd;
-    padding: 15px;
-    margin: 20px;
-    border-radius: 5px;
-    text-align: right;
+  background: #ddd;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 5px;
+  text-align: right;
 }
 
 /* Footer */
 footer {
-    background: #2E5939;
-    color: #F8F9FA;
-    padding: 30px 20px;
-    text-align: center;
-    font-size: 16px;
+  background: #2e5939;
+  color: #f8f9fa;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 16px;
 }
 
 .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1100px;
-    margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .footer-section {
-    margin: 15px;
-    min-width: 200px;
+  margin: 15px;
+  min-width: 200px;
 }
 
 .footer-section h3 {
-    margin-bottom: 10px;
-    color: #FFD700;
+  margin-bottom: 10px;
+  color: #ffd700;
 }
 
 .footer-section p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .footer-section a {
-    color: #F8F9FA;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
+  color: #f8f9fa;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
 .footer-section a:hover {
-    color: #FFD700;
+  color: #ffd700;
 }
 
 /* Social Icons */
 .footer-section i {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 /* Footer Bottom */
 .footer-bottom {
-    margin-top: 20px;
-    border-top: 1px solid #F8F9FA;
-    padding-top: 10px;
+  margin-top: 20px;
+  border-top: 1px solid #f8f9fa;
+  padding-top: 10px;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    nav a {
-        display: block;
-        padding: 10px;
-        margin: 5px auto;
-    }
+  nav a {
+    display: block;
+    padding: 10px;
+    margin: 5px auto;
+  }
 
-    article {
-        max-width: 95%;
-    }
+  article {
+    max-width: 95%;
+  }
 
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .image {
-        margin-top: 20px;
-    }
+  .image img {
+    width: 200px; /* Slightly smaller on mobile */
+    height: 200px;
+  }
 
-    .pdf-grid, .awards-grid {
-        grid-template-columns: 1fr;
-    }
+  .experiences-grid {
+    grid-template-columns: 1fr; /* Switches to 1 column on smaller screens */
+  }
+
+  .pdf-grid,
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
 }
