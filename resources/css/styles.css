@@ -92,45 +92,58 @@ article {
   padding: 20px;
   max-width: 900px; /* Adjusted to fit content */
   margin: auto;
+  align-items: stretch; /* Ensures all cards have equal height */
 }
 
 /* Experience Item */
 .experience-item {
   background: #2e5939;
-  padding: 15px;
+  padding: 18px;
   border-radius: 8px;
   text-align: left;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  min-height: 280px; /* Ensures minimum consistent height */
 }
 
 /* Experience Description */
 .experience-item p {
-  margin-top: 10px;
+  margin-top: 8px;
   font-size: 14px;
+  line-height: 1.4;
 }
 
 /* Title and date styling */
 .experience-item h3 {
-  margin: 0 0 4px 0;
+  margin: 0 0 6px 0;
   text-align: center;
+  font-size: 16px;
+  line-height: 1.3;
 }
 
 .experience-date {
-  margin: 0 0 8px 0;
+  margin: 0 0 12px 0;
   color: #ffd700;
   font-weight: bold;
   text-align: center;
+  font-size: 13px;
 }
 
 /* Lists inside experience items */
 .experience-item ul {
-  margin: 10px 0 0;
-  padding-left: 20px;
+  margin: 0;
+  padding-left: 18px;
   text-align: left; /* Keep bullets and text left-aligned */
+  flex-grow: 1; /* Allows list to expand and fill available space */
 }
 
 .experience-item li {
-  margin: 6px 0;
+  margin: 5px 0;
+  font-size: 13px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 /* Container (Flexbox for About Section) */
