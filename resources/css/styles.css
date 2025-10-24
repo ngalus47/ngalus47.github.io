@@ -146,6 +146,97 @@ article {
   hyphens: auto;
 }
 
+/* Leadership & Recognitions Vertical Layout */
+.leadership-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 20px;
+  max-width: 800px; /* Slightly narrower for better centering */
+  margin: 0 auto; /* Center the container */
+  align-items: center; /* Center the cards horizontally */
+}
+
+.leadership-item {
+  background: #2e5939;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.leadership-item h3 {
+  margin: 0 0 6px 0;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.leadership-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Experiences Vertical Layout (for top 3) */
+.experiences-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 20px;
+  max-width: 800px; /* Slightly narrower for better centering */
+  margin: 0 auto; /* Center the container */
+  align-items: center; /* Center the cards horizontally */
+}
+
+.experience-vertical-item {
+  background: #2e5939;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.experience-vertical-item h3 {
+  margin: 0 0 6px 0;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.experience-vertical-item .experience-date {
+  margin: 0 0 12px 0;
+  color: #ffd700;
+  font-weight: bold;
+  text-align: left;
+  font-size: 13px;
+}
+
+.experience-vertical-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Lists inside vertical experience items */
+.experience-vertical-item ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.experience-vertical-item li {
+  margin: 6px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
 /* Container (Flexbox for About Section) */
 /* Adjust About Me section for better spacing */
 .container {
@@ -304,6 +395,72 @@ article {
   margin: auto;
 }
 
+/* Featured Recognition Section */
+.featured-recognition {
+  margin: 20px 0;
+}
+
+.tumc-feature-card {
+  background: #31543A;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tumc-grid {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 30px;
+  align-items: start;
+}
+
+.tumc-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.tumc-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  aspect-ratio: 3/4;
+  display: block;
+  max-width: 100%;
+}
+
+.tumc-text {
+  padding: 0 20px;
+}
+
+.tumc-text h3 {
+  color: #f8f9fa;
+  font-size: 18px;
+  margin: 0 0 20px 0;
+  line-height: 1.4;
+  text-align: left;
+  font-weight: 600;
+}
+
+.tumc-text p {
+  color: #f8f9fa;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+  text-align: left;
+}
+
+.tumc-text p:last-child {
+  margin-bottom: 0;
+}
+
 /* Award Item */
 .award-item {
   background: #2e5939;
@@ -408,8 +565,38 @@ footer {
     grid-template-columns: 1fr; /* Switches to 1 column on smaller screens */
   }
 
+  .experiences-vertical,
+  .leadership-grid {
+    gap: 1rem; /* Reduced gap on mobile */
+    padding: 15px;
+  }
+
   .pdf-grid,
   .awards-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tumc-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .tumc-photo {
+    order: 1;
+  }
+
+.tumc-text {
+  order: 2;
+}
+
+  .tumc-text h3,
+  .tumc-text p {
+    text-align: center;
+  }
+
+  .tumc-photo img {
+    max-width: 250px;
+    margin: 0 auto;
   }
 }
