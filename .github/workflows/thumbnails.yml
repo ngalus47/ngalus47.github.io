@@ -1,0 +1,40 @@
+name: Generate PDF thumbnails
+
+on:
+  push:
+    paths:
+      - "resources/pdfs/**"
+      - "scripts/generate-thumbnails.sh"
+      - ".github/workflows/thumbnails.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: thumbnails-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  thumbnails:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install poppler
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      - name: Generate thumbnails
+        run: ./scripts/generate-thumbnails.sh
+
+      - name: Commit updated thumbnails
+        run: |
+          git add -A resources/thumbnails
+          if git diff --cached --quiet; then
+            echo "Thumbnails already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update PDF thumbnails"
+          git push
