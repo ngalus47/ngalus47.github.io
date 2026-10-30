@@ -750,9 +750,15 @@ footer {
   background: #fff;
 }
 
-/* Light-colored logos: keep the dark gradient tile behind them */
-.experience-thumb img.logo.logo-on-dark {
+/* Light-colored logos: invert them onto a white tile.
+   The filter would also invert the img's own background, so the white goes on the tile instead. */
+.experience-thumb:has(img.logo-invert) {
+  background: #fff;
+}
+
+.experience-thumb img.logo.logo-invert {
   background: transparent;
+  filter: invert(1);
 }
 
 /* Experience "View More Details" dropdown */
