@@ -742,6 +742,14 @@ footer {
   object-fit: cover;
 }
 
+/* Company logos: show the whole logo on a white tile instead of cropping */
+.experience-thumb img.logo {
+  box-sizing: border-box;
+  object-fit: contain;
+  padding: 14px;
+  background: #fff;
+}
+
 /* Experience "View More Details" dropdown */
 .experience-details {
   margin-top: 14px;
