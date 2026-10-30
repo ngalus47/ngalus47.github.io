@@ -734,6 +734,11 @@ footer {
   letter-spacing: 1px;
 }
 
+/* Hide the initials once an image loads (transparent logos would show them through) */
+.experience-thumb:has(img)::before {
+  content: none;
+}
+
 .experience-thumb img {
   position: absolute;
   inset: 0;
