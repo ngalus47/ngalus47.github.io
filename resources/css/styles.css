@@ -750,6 +750,11 @@ footer {
   background: #fff;
 }
 
+/* Light-colored logos: keep the dark gradient tile behind them */
+.experience-thumb img.logo.logo-on-dark {
+  background: transparent;
+}
+
 /* Experience "View More Details" dropdown */
 .experience-details {
   margin-top: 14px;
