@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiences - Nicholas Galus</title>
     <link rel="stylesheet" href="resources/css/styles.css">
+    <script src="resources/js/experience-galleries.js" defer></script>
+    <script src="resources/js/experience-view.js" defer></script>
 </head>
 
 <body>
@@ -29,9 +31,20 @@
                 Thumbnails: drop an image into resources/images/experiences/ using the
                 filename in each <img src>. If no image exists, the initials in
                 data-initials are shown as a placeholder instead.
+
+                Photos: each card's id matches a key in resources/js/experience-galleries.js.
+                Put photos in resources/images/experiences/<id>/ and list them there. The
+                first photo becomes the card's cover and the header of the detail view;
+                the rest show in the gallery.
+
+                Detail view: "View More Details" opens everything inside
+                .experience-details-content. To add a longer write-up, add more
+                <h4>/<p> blocks there, e.g.:
+                    <h4>What I Gained</h4>
+                    <p>...</p>
             -->
             <div class="experiences-vertical">
-                <div class="experience-vertical-item has-thumb">
+                <div class="experience-vertical-item has-thumb" id="samsat-pm">
                     <div class="experience-thumb" data-initials="SAMSAT">
                         <img class="logo logo-invert" src="resources/images/experiences/samsat.png" alt="SAMSAT" loading="lazy" onerror="this.remove()">
                     </div>
@@ -56,7 +69,7 @@
                     </div>
                 </div>
 
-                <div class="experience-vertical-item has-thumb">
+                <div class="experience-vertical-item has-thumb" id="polaris">
                     <div class="experience-thumb" data-initials="POL">
                         <img class="logo" src="resources/images/experiences/polaris.svg" alt="Polaris" loading="lazy" onerror="this.remove()">
                     </div>
@@ -81,7 +94,7 @@
                     </div>
                 </div>
 
-                <div class="experience-vertical-item has-thumb">
+                <div class="experience-vertical-item has-thumb" id="samsat-rd">
                     <div class="experience-thumb" data-initials="SAMSAT">
                         <img class="logo logo-invert" src="resources/images/experiences/samsat.png" alt="SAMSAT" loading="lazy" onerror="this.remove()">
                     </div>
@@ -106,7 +119,7 @@
                     </div>
                 </div>
 
-                <div class="experience-vertical-item has-thumb">
+                <div class="experience-vertical-item has-thumb" id="icr">
                     <div class="experience-thumb" data-initials="ICR">
                         <img class="logo" src="resources/images/experiences/icr.png" alt="ICR" loading="lazy" onerror="this.remove()">
                     </div>
@@ -131,7 +144,7 @@
                     </div>
                 </div>
 
-                <div class="experience-vertical-item has-thumb">
+                <div class="experience-vertical-item has-thumb" id="spring-research">
                     <div class="experience-thumb" data-initials="SRF">
                         <img class="logo" src="resources/images/experiences/st-marys.png" alt="St. Mary's University" loading="lazy" onerror="this.remove()">
                     </div>
@@ -156,7 +169,7 @@
                     </div>
                 </div>
 
-                <div class="experience-vertical-item has-thumb">
+                <div class="experience-vertical-item has-thumb" id="cosa-it">
                     <div class="experience-thumb" data-initials="COSA">
                         <img class="logo" src="resources/images/experiences/cosa.png" alt="City of San Antonio" loading="lazy" onerror="this.remove()">
                     </div>
@@ -181,7 +194,7 @@
                     </div>
                 </div>
 
-                <div class="experience-vertical-item has-thumb">
+                <div class="experience-vertical-item has-thumb" id="accenture">
                     <div class="experience-thumb" data-initials="AFS">
                         <img class="logo" src="resources/images/experiences/accenture_federal_services.png" alt="Accenture Federal Services" loading="lazy" onerror="this.remove()">
                     </div>
@@ -206,7 +219,7 @@
                     </div>
                 </div>
 
-                <div class="experience-vertical-item has-thumb">
+                <div class="experience-vertical-item has-thumb" id="cosa-public-works">
                     <div class="experience-thumb" data-initials="COSA">
                         <img class="logo" src="resources/images/experiences/cosa.png" alt="City of San Antonio" loading="lazy" onerror="this.remove()">
                     </div>
